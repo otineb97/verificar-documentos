@@ -41,7 +41,7 @@ const checkDocuments = async (directory) => {
 };
 
 // Reemplaza 'tu_carpeta' con la ruta a tu carpeta
-const directoryPath = 'tu_carpeta';
+const directoryPath = 'C:\Users\Admin\Desktop\Documentos_word';
 
 checkDocuments(directoryPath).then(({ totalFiles, goodFiles, badFiles }) => {
     console.log(`Total de archivos analizados: ${totalFiles}`);
