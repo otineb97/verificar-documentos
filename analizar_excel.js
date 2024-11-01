@@ -32,7 +32,7 @@ const checkDocuments = async (directory) => {
 };
 
 // Reemplaza 'tu_carpeta' con la ruta a tu carpeta
-const directoryPath = 'C:\\Users\\Admin\\Documents\\Documentos_excel\\2024';
+const directoryPath = 'C:\\Users\\Admin\\Documents\\Documentos_excel';
 
 checkDocuments(directoryPath).then(({ totalFiles, goodFiles, badFiles }) => {
     console.log(`Total de archivos analizados: ${totalFiles}`);
