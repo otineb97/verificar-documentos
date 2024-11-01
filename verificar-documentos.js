@@ -14,7 +14,7 @@ const checkDocuments = async (directory) => {
 
             if (fs.statSync(filePath).isDirectory()) {
                 await walkDirectory(filePath);
-            } else if (file.endsWith('.doc')) {
+            } else if (file.endsWith('.doc') || file.endsWith('.docx')) { // Modificación aquí
                 totalFiles++;
                 try {
                     await new Promise((resolve, reject) => {
@@ -41,7 +41,7 @@ const checkDocuments = async (directory) => {
 };
 
 // Reemplaza 'tu_carpeta' con la ruta a tu carpeta
-const directoryPath = 'C:\\Users\\Admin\\Documents\\Documentos_word\\2024';
+const directoryPath = 'C:\\Users\\Admin\\Documents\\Documentos_word';
 
 checkDocuments(directoryPath).then(({ totalFiles, goodFiles, badFiles }) => {
     console.log(`Total de archivos analizados: ${totalFiles}`);
